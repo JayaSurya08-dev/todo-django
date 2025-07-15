@@ -26,7 +26,7 @@ Database: SQLite (default)
 
 📦 Installation & Setup
 # Clone the repo
-git clone https://github.com/your-username/todo-django.git
+git clone https://github.com/JayaSurya08-dev/todo-django.git
 cd todo-django
 
 # Create a virtual environment
