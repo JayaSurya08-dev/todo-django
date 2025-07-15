@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Task</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container py-5">
+    <h2 class="mb-4">✏️ Edit Task</h2>
+
+    <form method="POST" class="row g-3">
+      {% csrf_token %}
+      <div class="col-md-6">
+        <label class="form-label">Title</label>
+        <input type="text" name="title" class="form-control" value="{{ task.title }}" required>
+      </div>
+      <div class="col-md-3">
+        <label class="form-label">Due Date</label>
+        <input type="date" name="due_date" class="form-control" value="{{ task.due_date|date:'Y-m-d' }}">
+      </div>
+      <div class="col-md-3">
+        <label class="form-label">Priority</label>
+        <select name="priority" class="form-select">
+          <option value="L" {% if task.priority == 'L' %}selected{% endif %}>Low</option>
+          <option value="M" {% if task.priority == 'M' %}selected{% endif %}>Medium</option>
+          <option value="H" {% if task.priority == 'H' %}selected{% endif %}>High</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-success">Update</button>
+        <a href="/" class="btn btn-secondary">Cancel</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
