@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Django SQLite database
+*.sqlite3
+
+# Django migrations
+**/migrations/
+!**/migrations/__init__.py
+
+# Secrets (if you use them)
+*.env
+
+# Static & media files (if generated)
+staticfiles/
+media/
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Test coverage and logs
+htmlcov/
+*.log
+coverage.xml
+*.cover
+*.py,cover
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Node modules (if used)
+node_modules/
